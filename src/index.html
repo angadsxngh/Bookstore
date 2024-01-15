@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookStore</title>
+    <link rel="stylesheet" href="/src/output.css">
+</head>
+<body>
+    <!-- background -->
+    <div class="bg-[#ebebeb] h-screen">
+        <!-- nav bar starts -->
+        <div class="bg-white md:py-14 py-14 flex z-[2] fixed w-full shadow-[0_0_8px_0_rgba(0,0,0,0.2)]">
+            <div class="">
+                
+            </div>
+           <div class="">
+                <img src="/images/png/logo-no-background.png" class="md:h-24 h-24 absolute left-[50%] translate-x-[-50%] top-[8%] cursor-pointer" alt="The Bookstore">
+           </div>
+           <div class="flex flex-row">
+                <ul>
+                    <li onclick=showSidebar()><img src="/images/icons8-hamburger-menu-50.png" class="h-5 absolute left-[3%] top-[30%] md:top-[40%] cursor-pointer" alt="menu"></li>
+                    <li><img src="/images/icons8-search-50.png" class="h-5 absolute right-[13%] md:right-[11%] top-[30%] md:top-[40%] hidden md:flex cursor-pointer" alt="find"></li>
+                    <li><img src="/images/icons8-star-30.png" class="h-5 absolute right-[8%] top-[4%] md:top-[40%] cursor-pointer hidden md:inline" alt="wishlist"></li>
+                    <li><img src="/images/icons8-shopping-bag-50.png" class="h-5 absolute right-[5%] top-[30%] md:top-[40%] cursor-pointer" alt="cart"></li>
+                </ul>
+           </div>
+        </div>
+        <!-- sidebar starts -->
+        
+        <div class="z-[999] fixed md:py-[3.1%] py-[3%] bg-white shadow-[0_0_8px_0_rgba(0,0,0,0.2)]">
+            <button onclick= hideSidebar()><img src="/images/icons8-close-50.png" class="closebutton m-1 h-5 bg-transparent z-[999] absolute left-[3%] md:top-[5%] top-[3%] md:left-[14%]" alt=""></button>
+            <ul class="sidebar flex-col gap-4 text-xl font-thin h-screen mt-100 md:w-80 hidden py-10 w-screen">
+                <li class="hover:bg-[#ebebeb] w-full text-center py-5 cursor-pointer">Find</li>
+                <li class="hover:bg-[#ebebeb] w-full text-center py-5 cursor-pointer">Action</li>
+                <li class="hover:bg-[#ebebeb] w-full text-center py-5 cursor-pointer">Drama</li>
+                <li class="hover:bg-[#ebebeb] w-full text-center py-5 cursor-pointer">Fiction</li>
+                <li class="hover:bg-[#ebebeb] w-full text-center py-5 cursor-pointer">Science</li>
+                <li class="hover:bg-[#ebebeb] w-full text-center py-5 cursor-pointer">Sci Fi</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+</body>
+</html>
